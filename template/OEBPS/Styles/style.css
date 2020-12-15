@@ -28,8 +28,12 @@ body {
     font-weight: normal;
 }
 
+/* Parrafo y enlace */
 p {
-    margin: 1em 0 0;
+    margin-top: 1em;
+    margin-right: 0;
+    margin-bottom: 1em;
+    margin-left: 0;
     text-align: justify;
     text-indent: 1.5em;
     line-height: 125%;
@@ -43,7 +47,7 @@ a {
     -webkit-text-fill-color: inherit;
 }
 
-/*NOTAS*/
+/* Notas */
 .nota {
     padding-top: 10%;
     page-break-before: always;
@@ -71,7 +75,7 @@ a sup {
     font-weight: bold;
 }
 
-/*IMAGENES*/
+/* Imagenes */
 img {
     max-width: 100vw;
     max-height: 100vh;
@@ -90,7 +94,7 @@ div.IMG {
     text-align: center;
 }
 
-/******************* Tipografía **********************/
+/* Tipografía */
 
 i {
     font-style: italic;
@@ -106,7 +110,12 @@ b {
     visibility: hidden;
 }
 
-/******************* Alineación *******************/
+/* Alineación */
+
+.izquierda, .izquierda p {
+    text-align: left;
+    text-indent: 0;
+}
 
 .derecha, .derecha p {
     text-align: right;
@@ -122,11 +131,12 @@ b {
     margin: 0;
 }
 
-/**************** ENCABEZADOS ****************/
+/* Fuente de Título */
 @font-face { font-family:"Old";
 src:url(../Fonts/OLDENGL.TTF);
 }
 
+/* Encabezados */
 h1, h2, h3, h4, h5, h6 {
     font-size: 1.2em;
     font-weight: bold;
@@ -138,7 +148,7 @@ h1 {
     font-size: 1.8em;
     margin: 2.5em 0 1em;
     font-family: "Old", "sans-serif" !important;
-    font-weight: 500;
+    font-weight: normal;
 }
 
 h2 {
@@ -149,7 +159,12 @@ h3 {
     margin: 0.5em 0 0;
 }
 
-/***** Evitar división de contenido entre páginas *********/
+h4{
+    text-align: left;
+    text-indent: 1.5em;
+}
+
+/* Evitar división de contenido entre páginas */
 h1, h2, h3, h4, h5, h6, hr {
     page-break-inside: avoid;
     break-inside: avoid;
@@ -157,8 +172,8 @@ h1, h2, h3, h4, h5, h6, hr {
     break-after: avoid;
 }
 
-/************ EVITAR SILABEO ********************/
-h1, h2, h3, h4, h5, h6, .centrado, .derecha {
+/* Evitar silabeo */
+h1, h2, h3, h4, h5, h6, .izquierda, .centrado, .derecha {
     adobe-hyphenate: none;
     -ms-hyphens: none;
     -moz-hyphens: none;
@@ -167,8 +182,7 @@ h1, h2, h3, h4, h5, h6, .centrado, .derecha {
     hyphens: none;
 }
 
-/*CUBIERTA*/
-
+/* Cubierta */
 .cubierta {
     margin: 0;
     padding: 0;
@@ -180,8 +194,9 @@ h1, h2, h3, h4, h5, h6, .centrado, .derecha {
     page-break-after: always;
 }
 
-/*ESPACIOS ENTRE PARRAFOS*/
+/* Espacios entre parrafos */
 p.int1, div.int1 {
+    margin-top: 1em;
     windows: 0;
     display: block;
     page-break-inside: avoid !important;
@@ -190,10 +205,6 @@ p.int1, div.int1 {
 
 div>p{
     margin: 0;
-}
-
-p + div, div.int1 {
-    margin-top: 1em;
 }
 
 p.int2 {
