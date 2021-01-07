@@ -1,5 +1,5 @@
 /* RESET DE ELEMENTOS HTML */
-div, h1, h2, h3, hr, p, img {
+blockquote, div, h1, h2, h3, hr, p, img {
     font-size: 1em;
     font-style: inherit;
     font-weight: inherit;
@@ -9,7 +9,7 @@ div, h1, h2, h3, hr, p, img {
     text-indent: 0;
 }
 
-a, b, i, span, sub, sup {
+a, b, i, ins, del, big, small, span, sub, sup {
     color: inherit;
     font-size: inherit;
     font-style: inherit;
@@ -35,13 +35,11 @@ p {
     margin-bottom: 1em;
     margin-left: 0;
     text-align: justify;
-    text-indent: 1.5em;
+    text-indent: 0;/*1.5em*/
     line-height: 125%;
 }
 
 a {
-    font-style: normal;
-    font-weight: normal;
     text-decoration: none;
     color: inherit;
     -webkit-text-fill-color: inherit;
@@ -51,6 +49,7 @@ a {
 .nota {
     padding-top: 10%;
     page-break-before: always;
+    break-before: column;
 }
 
 .nota p {
@@ -77,41 +76,99 @@ a sup {
 
 /* Imagenes */
 img {
-    max-width: 100vw;
-    max-height: 100vh;
     width: auto;
+    max-width: 100vw;
     height: auto;
+    max-height: 100vh;
     margin-top: 0;
     margin-right: auto;
     margin-bottom: 0;
     margin-left: auto;
     page-break-inside: avoid;
     break-inside: avoid;
+    object-fit: contain;
 }
 
-div.IMG {
+/* Imagen que cubre toda la pantalla*/
+div.dimg {
+    width: auto;
+    height: auto;
+    max-width: 100vw;
+    max-height: 100vh;
+    margin-right: auto;
+    margin-left: auto;
     line-height: 0;
     text-align: center;
 }
+div.pagina{
+    width: 100%;
+    height: 100%;
+}
+div.seguida{
+    width: 100%;
+    height: auto;
+}
+div.pagina img, div.seguida img{
+    width: inherit;
+    height: inherit;
+}
+div.logo, div.hr{
+    margin: 1em 0;
+}
+div.logo img{
+    width: 65%;
+    max-width: 20em;
+    height: auto;
+}
+div.hr img{
+    width: auto;
+    height: 1em;
+}
 
-/* Tipografía */
 
+/* Cursiva */
 i {
     font-style: italic;
 }
 
-
+/* Negrita */
 b {
     font-weight: bold;
 }
 
+/* Subrayado */
+ins {
+    text-decoration: underline;
+}
+
+/* Tachado */
+del {
+    text-decoration: line-through;
+}
+
+/* Texto en grande, útil en onomatopeyas fuertes */
+big {
+    font-size: 1.2em;
+}
+
+/* Texto en versalita */
+small {
+    font-size: 0.8em;
+}
+
+/* Texto oculto */
 .oculto {
     display: none;
     visibility: hidden;
 }
 
-/* Alineación */
+/* Evitar dividir una palabra entre líneas */
+span.nosep {
+    text-indent: 0;
+    display: inline-block;
+}
 
+/* Alineación */
 .izquierda, .izquierda p {
     text-align: left;
     text-indent: 0;
@@ -127,11 +184,15 @@ b {
     text-indent: 0;
 }
 
+.asangre, .asangre p {
+    text-indent: 0;
+}
+
 .sinmargen {
     margin: 0;
 }
 
-/* Fuente de Título */
+/* Definición de una fuente */
 @font-face { font-family:"Old";
 src:url(../Fonts/OLDENGL.TTF);
 }
@@ -140,28 +201,46 @@ src:url(../Fonts/OLDENGL.TTF);
 h1, h2, h3, h4, h5, h6 {
     font-size: 1.2em;
     font-weight: bold;
-    margin: 1em 0;
+    margin-top: 1em;
+    margin-right: 0;
+    margin-bottom: 1em;
+    margin-left: 0;
     text-align: center;
 }
 
 h1 {
-    font-size: 1.8em;
-    margin: 2.5em 0 1em;
-    font-family: "Old", "sans-serif" !important;
+    font-size: 1.6em;
+    margin-top: 2.5em;
+    font-family: "Old", "sans-serif", sans-serif;
     font-weight: normal;
 }
 
 h2 {
-    font-size: 1.6em;
-    margin: 1.5em 0 0;
+    font-size: 1.4em;
+    margin-top: 1.5em;
 }
+
 h3 {
-    margin: 0.5em 0 0;
+    font-size: 1.3em;
+    margin-top: 0.5em;
 }
 
 h4{
+    font-size: 1.3em;
     text-align: left;
     text-indent: 1.5em;
+}
+
+h1.titulo {
+    font-family: "sans-serif", sans-serif;
+    font-weight: bold;
+    margin-top: 1.5em;
+    margin-bottom: 0;
+}
+
+h2.subtitulo {
+    margin-top: 0.5em;
+    margin-bottom: 0;
 }
 
 /* Evitar división de contenido entre páginas */
@@ -190,27 +269,48 @@ h1, h2, h3, h4, h5, h6, .izquierda, .centrado, .derecha {
     font-size: 0;
     text-align: center;
     text-indent: 0;
-    page-break-before: always;
-    page-break-after: always;
 }
 
-/* Espacios entre parrafos */
-p.int1, div.int1 {
-    margin-top: 1em;
-    windows: 0;
+/* Bloque que evita la separación del contenido */
+p.blq, div.blq {
     display: block;
-    page-break-inside: avoid !important;
-    break-inside: avoid !important;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    windows: 0;
+    page-break-inside: avoid;
+    break-inside: avoid;
 }
 
 div>p{
     margin: 0;
 }
 
-p.int2 {
+/* Bloque util para sinopsis y secciones tipo carta */
+blockquote {
+    display: block;
+    margin-right: 9%;
+    margin-left: 9%;
+    quotes: none;
+}
+
+/* Espacios entre parrafos */
+.salto0 {
+    margin-top: 0.5em;
+}
+
+.salto1 {
+    margin-top: 1.5em;
+}
+
+.salto2 {
     margin-top: 2em;
 }
 
-p.int3 {
+.salto3 {
     margin-top: 3em;
+}
+
+.saltop {
+    page-break-before: always;
+    break-before: column;
 }
