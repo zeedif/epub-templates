@@ -1,0 +1,11 @@
+nav#landmarks {
+    display:none;
+}
+
+nav#page-list {
+    display:none;
+}
+
+ol, ol li {
+    list-style-type: none;
+}
