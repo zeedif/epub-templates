@@ -322,15 +322,7 @@ figure {
   margin-left: auto;
   line-height: 0;
   text-align: center;
-  page-break-inside: avoid;
-  break-inside: avoid; /*margin: 1.5em 0;*/
-}
-@media amzn-mobi {
-  figure {
-    /*margin: 1em 0;*/
-    page-break-inside: auto;
-    break-inside: auto;
-  }
+  object-fit: contain;
 }
 figcaption {
   font-size: 0.9375em;
@@ -346,19 +338,22 @@ img {
   margin-right: auto;
   margin-bottom: 0;
   margin-left: auto;
-  /*page-break-inside: avoid;
- break-inside: avoid;*/
+  page-break-inside: avoid;
+  break-inside: avoid;
   object-fit: contain;
   vertical-align: bottom; /*Remove gap after the image*/
 }
-figure.pagina, figure.seguida {
+
+@media amzn-mobi {
+  img {
+    page-break-inside: auto;
+    break-inside: auto;
+  }
+}
+figure.dimg {
   width: 100%;
 }
-figure.pagina img {
-  width: auto;
-  height: 100%; /*We try to prevent blank page after*/
-}
-figure.seguida img {
+figure.dimg img {
   width: auto;
   height: auto;
 }
@@ -378,11 +373,6 @@ figure.hr img {
   height: 1.16666666em;
   margin: 0 1ex;
   vertical-align: middle;
-}
-@supports (height:99vh) {
-  figure.pagina img {
-    height: 99vh;
-  }
 }
 /*Listas*/
 ul, ol {
@@ -677,7 +667,7 @@ svg {
 /*No recomendado: Tiene menor soporte que after*/
 /*Antes era saltop*/
 .sepag-ant {
-  page-break-before: always;
+  page-break-before: avoid;
   break-before: column;
 }
 /*Por alguna razón, after tiene mejor soporte que before (Google, Kobo, etc.)*/
