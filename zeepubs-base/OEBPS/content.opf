@@ -31,10 +31,13 @@
     <meta property="identifier-type" refines="#amazon-id" scheme="xsd:string">amazon</meta>
     <dc:identifier id="uri-id">urn:uri:http://grupotraductor.com/nombre-novela</dc:identifier>
     <meta property="identifier-type" refines="#uri-id" scheme="xsd:string">uri</meta>
+    <meta id="serie" property="belongs-to-collection">Nombre de la Novela [NL]</meta>
+    <meta property="collection-type" refines="#serie">set</meta>
+    <meta property="group-position" refines="#serie">1</meta>
     <meta content="Nombre de la Novela [NL]" name="calibre:series"/>
     <meta content="1" name="calibre:series_index"/>
     <meta content="9" name="calibre:rating"/>
-    <meta property="dcterms:modified">2021-03-29T18:22:07Z</meta>
+    <meta property="dcterms:modified">2021-03-31T18:22:12Z</meta>
     <meta content="1.5.1" name="Sigil version"/>
     <meta name="cover" content="cover.jpg"/>
   </metadata>
