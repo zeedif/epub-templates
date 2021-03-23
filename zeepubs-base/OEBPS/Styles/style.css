@@ -667,15 +667,18 @@ svg {
 }
 /*PAGE BREAKS*/
 /*No recomendado: Tiene menor soporte que after*/
-/*Antes era saltop*/
-.sepag-ant {
-  page-break-before: avoid;
+.santes {
   break-before: column;
 }
 /*Por alguna razón, after tiene mejor soporte que before (Google, Kobo, etc.)*/
-.sepag-sig {
-  page-break-after: always;
+.ssigue {
   break-after: column;
+}
+span.separador{
+  break-before: always;
+  page-break-before: always;
+  break-after: always;
+  page-break-after: always;
 }
 /*Funciona en iBooks, útil para figuras o para mantener 2 elementos juntos*/
 /*Antes era blq*/
