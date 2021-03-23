@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<package version="3.0" unique-identifier="pub-id" prefix="onix: http://www.editeur.org/ONIX/book/codelists/current.html#" xml:lang="es" xmlns="http://www.idpf.org/2007/opf">
+<package version="3.0" unique-identifier="BookId" prefix="onix: http://www.editeur.org/ONIX/book/codelists/current.html#" xml:lang="es" xmlns="http://www.idpf.org/2007/opf">
   <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
     <dc:language>es</dc:language>
     <dc:title>Nombre de la Novela - Volumen 01 [SIGLAS]</dc:title>
@@ -22,7 +22,7 @@
     <dc:contributor id="contrib3">ZeePubs</dc:contributor>
     <meta property="role" refines="#contrib3" scheme="marc:relators">dst</meta>
     <dc:publisher>Grupo Traductor</dc:publisher>
-    <dc:identifier id="pub-id">urn:uuid:cb73990a-de75-4fe8-b57b-589db016d5fe</dc:identifier>
+    <dc:identifier id="BookId">urn:uuid:cb73990a-de75-4fe8-b57b-589db016d5fe</dc:identifier>
     <dc:identifier id="isbn13">urn:isbn:000-00-0000-000-0</dc:identifier>
     <meta property="identifier-type" refines="#isbn13" scheme="onix:codelist5">15</meta>
     <dc:identifier id="isbn10">urn:isbn:00-0000-000-0</dc:identifier>
@@ -34,7 +34,7 @@
     <meta content="Nombre de la Novela [NL]" name="calibre:series"/>
     <meta content="1" name="calibre:series_index"/>
     <meta content="9" name="calibre:rating"/>
-    <meta property="dcterms:modified">2021-03-18T14:19:00Z</meta>
+    <meta property="dcterms:modified">2021-03-23T08:36:33Z</meta>
     <meta content="1.4.3" name="Sigil version"/>
     <meta name="cover" content="cover.jpg"/>
   </metadata>
