@@ -122,7 +122,6 @@ h1 {
   line-height: 1; /*1.5/f-z*/
   margin-top: 2.5em; /*1.5/f-z*/
   margin-bottom: 2em; /*3/f-z*/
-  font-family: "Times New Roman", Times New Roman, sans-serif;
   font-weight: bold; /*font-weight: normal;*/
 }
 @media amzn-mobi {
@@ -269,20 +268,20 @@ ins {
   text-decoration: underline;
 }
 /*Texto en grande, útil en onomatopeyas fuertes*/
-big {
+big, .grande {
   font-size: 1.16666666em;
 }
 @media amzn-mobi {
-  big {
+  big, .grande {
     font-size: large;
   }
 }
 /*Texto en versalita*/
-small {
+small, .versalita {
   font-size: 0.83333333em;
 }
 @media amzn-mobi {
-  small {
+  small, .versalita {
     font-size: small;
   }
 }
@@ -468,7 +467,7 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
   max-width: 100%;
-  margin: 1.5em auto; /*Note: Adobe RMSDK legacy sets auto to 0, which is permitted in a footnote of the EPUB2 specs*/
+  margin: 1.5em auto; /*Nota: Adobe RMSDK legacy establece auto en 0, lo cual está permitido en una footnote de las especificaciones de EPUB2*/
   font-feature-settings: "tnum"1;
   font-variant-numeric: tabular-nums;
 }
@@ -478,14 +477,14 @@ table {
   }
 }
 caption {
-  caption-side: top; /*Note: only value Adobe RMSDK legacy supports*/
+  caption-side: top; /*Nota: único valor que soporta Adobe RMSDK legacy*/
   adobe-hyphenate: none; /*Propiedad de Adobe RMSDK legacy*/
   -ms-hyphens: none;
   -moz-hyphens: none;
   -webkit-hyphens: none;
   -epub-hyphens: none;
   hyphens: none;
-  text-indent: 0; /*Necessary as Readium SDK may define text-indent for p*/
+  text-indent: 0; /*Necesario como el SDK de Readium puede definir el text-indent para p*/
   text-align: center;
   font-weight: bold;
 }
@@ -534,7 +533,7 @@ pre {
   }
 }
 code, kbd, samp, var {
-  font-family: monospace; /*Embed a font cos Kobo doesn't provide a monospace*/
+  font-family: monospace; /*Incrustar una fuente porque Kobo no proporciona una monoespacio*/
 }
 /*MEDIAS*/
 audio {
@@ -557,7 +556,7 @@ svg {
   display: inline-block;
 }
 /*Texto oculto*/
-.oculto {
+.oculto, .sigil_split_marker {
   /*Uso: Puntos de referencia (landmarks) en TOC de EPUB3*/
   display: none;
   visibility: hidden;
@@ -565,7 +564,18 @@ svg {
 /*Contenido bordeado*/
 .borde {
   border: 0.0625em solid currentColor;
-  padding: 0.6875em;
+  padding: 0 0.6875em;
+}
+blockquote.aviso {
+  border: 2px solid #ff3333;
+  margin-left: 15%;
+  margin-right: 15%;
+  padding: 0 0.6875em;
+}
+blockquote.aviso p {
+  margin-top: 0.6875em;
+  margin-bottom: 0.6875em;
+  color: #ff3333;
 }
 /*Espacios entre parrafos*/
 .sinmargen {
@@ -593,11 +603,6 @@ svg {
 .salto3 {
   margin-top: 3em;
 }
-/*
-.saltop {
- page-break-before: always;
- break-before: column;
-}*/
 /*Conjunto de fuentes*/
 .sans {
   /*Uso típico: Títulos*/
@@ -608,9 +613,6 @@ svg {
 }
 .monospace {
   font-family: monospace;
-}
-.fuente {
-  font-family: "Times New Roman", Times New Roman, serif;
 }
 /*Alineación de texto*/
 .justificado, .justificado p {
@@ -701,3 +703,10 @@ span.separador{
   }
 }
 /*FIN DEL CSS*/
+h1 {
+  font-family: "Times New Roman", Times New Roman, sans-serif;
+}
+
+.fuente {
+  font-family: "Times New Roman", Times New Roman, serif;
+}
