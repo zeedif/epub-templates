@@ -170,6 +170,7 @@ h4 {
 h1.titulo {
   font-family: sans-serif;
   font-weight: bold;
+  margin-top: 1.5em;
   margin-bottom: 0;
 }
 h2.subtitulo {
