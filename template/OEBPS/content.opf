@@ -37,8 +37,8 @@
     <meta content="Nombre de la Novela [NL]" name="calibre:series"/>
     <meta content="1" name="calibre:series_index"/>
     <meta content="9" name="calibre:rating"/>
-    <meta property="dcterms:modified">2021-04-26T19:41:28Z</meta>
-    <meta content="1.5.1" name="Sigil version"/>
+    <meta property="dcterms:modified">2021-07-31T17:23:02Z</meta>
+    <meta content="1.6.0" name="Sigil version"/>
     <meta name="cover" content="cover.jpg"/>
   </metadata>
   <manifest>
