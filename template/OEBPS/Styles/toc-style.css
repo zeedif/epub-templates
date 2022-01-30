@@ -1,0 +1,102 @@
+@charset "UTF-8";
+@namespace epub "http: //www.idpf.org/2007/ops";
+/*Definición de una fuente*/
+@font-face {
+  font-family: 'Times New Roman';
+  src: url(../Fonts/times.ttf);
+}
+/* Cubierta y TOC */
+/* RESET DE ELEMENTOS HTML5 */
+figure, section {
+  margin: 0;
+  padding: 0;
+  font-size: 1em;
+  line-height: inherit;
+  font-style: normal;
+  font-weight: normal;
+  text-indent: 0;
+  display: block;
+}
+
+body>:last-child, body>section>:last-child {
+  margin-bottom: 0;
+}
+@page {
+  margin: 30px 30px 20px 30px;
+  padding: 0;
+}
+body {
+  font-size: 100%;
+  line-height: 1.25;
+  margin: 0;
+  padding: 0;
+  widows: 2;
+  orphans: 2;
+}
+
+figure {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  line-height: 0;
+  text-align: center;
+  object-fit: contain;
+}
+img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 95%;
+  margin-top: 0;
+  margin-right: auto;
+  margin-bottom: 0;
+  margin-left: auto;
+  page-break-inside: avoid;
+  break-inside: avoid;
+  object-fit: contain;
+  vertical-align: bottom;
+}
+@media amzn-mobi {
+  img {
+    page-break-inside: auto;
+    break-inside: auto;
+  }
+}
+h1 {
+  font-size: 1.5em;
+  line-height: 1; /*1.5/f-z*/
+  margin-top: 2.5em; /*1.5/f-z*/
+  margin-bottom: 2em; /*3/f-z*/
+  font-family: "Times New Roman", Times New Roman, sans-serif;
+  font-weight: bold; /*font-weight: normal;*/
+  text-align: center;
+}
+@media amzn-mobi {
+  h1 {
+    font-size: xx-large; /*Termino que ofrece más precisión para mobi 7*/
+    margin: 3em 0 2em 0; /*mobi7 no soporta valores decimales*/
+  }
+}
+
+div.nivel-1 {
+  margin-left: 0;
+  margin-top: 1em;
+}
+
+div.nivel-2 {
+  margin-left: 1em;
+}
+
+div.nivel-3 {
+  margin-left: 2em;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  -webkit-text-fill-color: inherit;
+  line-height: 125%;
+}

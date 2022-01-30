@@ -150,7 +150,7 @@ h3 {
   margin-bottom: 1.2em; /*1.5/f-z*/
 }
 @media amzn-mobi {
-  h3 {
+  h2 {
     font-size: xx-large;
     margin: 1em 0 1em 0;
   }
@@ -199,7 +199,7 @@ div {
   margin-left: 0;
   text-align: justify;
 }
-div>p, div>ul, div>ol, div li {
+div>p {
   margin: 0;
 }
 /*Bloque util para sinopsis y secciones tipo carta*/
@@ -380,14 +380,9 @@ img.entexto {
   vertical-align: middle;
 }
 /*Listas*/
-ul, ol, .listar{
+ul, ol, .listar {
+  margin: 1.5em 0;
   padding-left: 2em;
-}
-/*Añadir ", li" para separar la lista con un espacio entre parrafos
-Tambien puede usar <li><p></p></li>*/
-ul, ol {
-  margin: 1.5em 0;/*Cambiar a 1em para coincidir con parrafos */
-  text-align: justify;
 }
 @media amzn-mobi {
   ul, ol {
