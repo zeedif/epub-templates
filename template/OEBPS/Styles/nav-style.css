@@ -9,3 +9,6 @@ nav#page-list {
 ol, ol li {
     list-style-type: none;
 }
+ol ol {
+    margin: 0;
+}
