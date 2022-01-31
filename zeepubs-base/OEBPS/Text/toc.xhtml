@@ -3,36 +3,96 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="es" xml:lang="es">
 <head>
-  <title>Contenido</title>
-  <link rel="stylesheet" type="text/css" href="../Styles/toc-style.css"/>
+  <title>Índice</title>
   <meta charset="utf-8"/>
+  <link href="../Styles/nav-style.css" rel="stylesheet" type="text/css"/>
+  <link href="../Styles/style.css" rel="stylesheet" type="text/css"/>
 </head>
 
-<body xml:lang="es" lang="es" epub:type="frontmatter">
-  <section epub:type="toc" role="doc-toc" id="toc" aria-label="Contenido">
-    <!-- Se puede quitar el figure -->
-    <figure class="dimg">
-      <img src="../Images/02.jpg" alt=""/>
-    </figure>
-    <!-- Agregar cada Capítulo -->
-    <header>
-      <h1 class="titulo">Contenido</h1>
-    </header>
-    <div class="nivel-1">
-      <a href="Section0001.xhtml">Capítulo 1</a>
-    </div>
-    <div class="nivel-1">
-      <a href="Section0001.xhtml">Capítulo 2</a>
-    </div>
-    <div class="nivel-2">
-      <a href="Section0001.xhtml">Subtitulo 1</a>
-    </div>
-    <div class="nivel-3">
-      <a href="Section0001.xhtml">Acerca del autor</a>
-    </div>
-    <div class="nivel-1">
-      <a href="notas.xhtml">Notas</a>
-    </div>
-  </section>
+<body xml:lang="es" lang="es" epub:type="backmatter">
+  <nav epub:type="toc" id="toc" role="doc-toc">
+    <h1>Índice de contenido</h1>
+    <ol>
+      <li>
+        <a href="cubierta.xhtml">Cubierta</a>
+      </li>
+      <li>
+        <a href="resumen.xhtml">Ilustraciones</a>
+      </li>
+      <li>
+        <a href="titulo.xhtml">Página de Título</a>
+      </li>
+      <li>
+        <a href="epigrafe.xhtml">Epígrafe</a>
+      </li>
+      <li>
+        <a href="prefacio.xhtml">Prefacio</a>
+      </li>
+      <li>
+        <a href="prologo.xhtml">Prólogo</a>
+      </li>
+      <li>
+        <a href="Section0001.xhtml">Capítulo</a>
+      </li>
+      <li>
+        <a href="Section0001.xhtml#sigil_toc_id_1">Título del Capítulo</a>
+      <ol>
+        <li>
+          <a href="Section0001.xhtml#sigil_toc_id_2">Parte 2</a>
+        </li>
+      </ol>
+      </li>
+      <li>
+        <a href="epilogo.xhtml">Epílogo</a>
+      </li>
+      <li>
+        <a href="autor.xhtml">Palabras del autor</a>
+      </li>
+      <li>
+        <a href="traductor.xhtml">Palabras del traductor</a>
+      </li>
+    </ol>
+  </nav>
+<nav class="oculto" epub:type="landmarks" id="landmarks" hidden="hidden">
+    <h2>Guías</h2>
+    <ol role="directory">
+      <li>
+        <a href="resumen.xhtml" epub:type="introduction">Ilustraciones</a>
+      </li>
+      <li>
+        <a href="titulo.xhtml" epub:type="titlepage">Página de título</a>
+      </li>
+      <li>
+        <a href="titulo.xhtml" epub:type="copyright-page">Créditos</a>
+      </li>
+      <li>
+        <a href="epigrafe.xhtml" epub:type="epigraph">Epígrafe</a>
+      </li>
+      <li>
+        <a href="prefacio.xhtml" epub:type="preface">Prefacio</a>
+      </li>
+      <li>
+        <a href="prologo.xhtml" epub:type="prologue">Prólogo</a>
+      </li>
+      <li>
+        <a href="Section0001.xhtml" epub:type="bodymatter">Contenido principal</a>
+      </li>
+      <li>
+        <a href="epilogo.xhtml" epub:type="epilogue">Epílogo</a>
+      </li>
+      <li>
+        <a href="autor.xhtml" epub:type="afterword">Palabras del autor</a>
+      </li>
+      <li>
+        <a href="traductor.xhtml" epub:type="conclusion">Palabras del traductor</a>
+      </li>
+      <li>
+        <a href="notas.xhtml" epub:type="rearnotes">Notas</a>
+      </li>
+      <li>
+        <a href="toc.xhtml#toc" epub:type="toc">Índice de contenido</a>
+      </li>
+    </ol>
+  </nav>
 </body>
 </html>

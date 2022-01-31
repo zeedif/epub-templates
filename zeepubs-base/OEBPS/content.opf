@@ -45,33 +45,33 @@
     <item id="cubierta.xhtml" href="Text/cubierta.xhtml" media-type="application/xhtml+xml"/>
     <item id="resumen.xhtml" href="Text/resumen.xhtml" media-type="application/xhtml+xml"/>
     <item id="titulo.xhtml" href="Text/titulo.xhtml" media-type="application/xhtml+xml"/>
-    <item id="toc.xhtml" href="Text/toc.xhtml" media-type="application/xhtml+xml"/>
-    <item id="prologo.xhtml" href="Text/prologo.xhtml" media-type="application/xhtml+xml"/>
-    <item id="Section0001.xhtml" href="Text/Section0001.xhtml" media-type="application/xhtml+xml"/>
-    <item id="epilogo.xhtml" href="Text/epilogo.xhtml" media-type="application/xhtml+xml"/>
+    <item id="contenido.xhtml" href="Text/contenido.xhtml" media-type="application/xhtml+xml"/>
     <item id="epigrafe.xhtml" href="Text/epigrafe.xhtml" media-type="application/xhtml+xml"/>
+    <item id="prefacio.xhtml" href="Text/prefacio.xhtml" media-type="application/xhtml+xml"/>
+    <item id="prologo.xhtml" href="Text/prologo.xhtml" media-type="application/xhtml+xml"/>
+    <item id="epilogo.xhtml" href="Text/epilogo.xhtml" media-type="application/xhtml+xml"/>
     <item id="autor.xhtml" href="Text/autor.xhtml" media-type="application/xhtml+xml"/>
-    <item id="notas.xhtml" href="Text/notas.xhtml" media-type="application/xhtml+xml"/>
-    <item id="nav.xhtml" href="Text/nav.xhtml" media-type="application/xhtml+xml" properties="nav"/>
-    <item id="cover.jpg" href="Images/cover.jpg" media-type="image/jpeg" properties="cover-image"/>
-    <item id="style.css" href="Styles/style.css" media-type="text/css"/>
     <item id="traductor.xhtml" href="Text/traductor.xhtml" media-type="application/xhtml+xml"/>
-    <item id="toc-style.css" href="Styles/toc-style.css" media-type="text/css"/>
-    <item id="x02.jpg" href="Images/02.jpg" media-type="image/jpeg"/>
-    <item id="x03.jpg" href="Images/03.jpg" media-type="image/jpeg"/>
+    <item id="contracubierta.xhtml" href="Text/contracubierta.xhtml" media-type="application/xhtml+xml"/>
+    <item id="notas.xhtml" href="Text/notas.xhtml" media-type="application/xhtml+xml"/>
+    <item id="toc.xhtml" href="Text/toc.xhtml" media-type="application/xhtml+xml" properties="nav"/>
+    <item id="style.css" href="Styles/style.css" media-type="text/css"/>
+    <item id="nav-style.css" href="Styles/nav-style.css" media-type="text/css"/>
     <item id="times.ttf" href="Fonts/times.ttf" media-type="font/ttf"/>
     <item id="timesbd.ttf" href="Fonts/timesbd.ttf" media-type="font/ttf"/>
     <item id="timesbi.ttf" href="Fonts/timesbi.ttf" media-type="font/ttf"/>
     <item id="timesi.ttf" href="Fonts/timesi.ttf" media-type="font/ttf"/>
     <item id="grupo.png" href="Images/grupo.png" media-type="image/png"/>
-    <item id="nav-style.css" href="Styles/nav-style.css" media-type="text/css"/>
-    <item id="prefacio.xhtml" href="Text/prefacio.xhtml" media-type="application/xhtml+xml"/>
+    <item id="cover.jpg" href="Images/cover.jpg" media-type="image/jpeg" properties="cover-image"/>
+    <item id="x02.jpg" href="Images/02.jpg" media-type="image/jpeg"/>
+    <item id="x03.jpg" href="Images/03.jpg" media-type="image/jpeg"/>
+    <item id="Section0001.xhtml" href="Text/Section0001.xhtml" media-type="application/xhtml+xml"/>
   </manifest>
   <spine>
     <itemref idref="cubierta.xhtml" linear="yes"/>
     <itemref idref="resumen.xhtml"/>
     <itemref idref="titulo.xhtml"/>
-    <itemref idref="toc.xhtml"/>
+    <itemref idref="contenido.xhtml"/>
     <itemref idref="epigrafe.xhtml"/>
     <itemref idref="prefacio.xhtml"/>
     <itemref idref="prologo.xhtml"/>
@@ -79,7 +79,8 @@
     <itemref idref="epilogo.xhtml"/>
     <itemref idref="autor.xhtml"/>
     <itemref idref="traductor.xhtml"/>
+    <itemref idref="contracubierta.xhtml"/>
     <itemref idref="notas.xhtml"/>
-    <itemref idref="nav.xhtml" linear="no"/>
+    <itemref idref="toc.xhtml" linear="no"/>
   </spine>
 </package>
