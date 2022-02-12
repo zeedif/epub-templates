@@ -2,7 +2,7 @@
 <package version="3.0" unique-identifier="BookId" prefix="onix: http://www.editeur.org/ONIX/book/codelists/current.html#" xml:lang="es" xmlns="http://www.idpf.org/2007/opf">
   <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
     <dc:language>es</dc:language>
-    <dc:title>Nombre de la Novela - Volumen 01 [SIGLAS]</dc:title>
+    <dc:title>Nombre de la novela en romanji - Volumen 01 [SIGLAS]</dc:title>
     <dc:date>2021-01-01T00:00:00Z</dc:date>
     <dc:creator id="creator01">Autor Apellido</dc:creator>
     <meta property="role" refines="#creator01" scheme="marc:relators">aut</meta>
@@ -13,7 +13,11 @@
     <meta property="alternate-script" refines="#creator02" xml:lang="ja">村上 春樹</meta>
     <meta property="file-as" refines="#creator02">Apellido, Ilustrador</meta>
     <dc:type>Novela Ligera</dc:type>
-    <dc:subject>Genero Literario</dc:subject>
+    <dc:subject>Demografía 1</dc:subject>
+    <dc:subject>Demografía 2</dc:subject>
+    <dc:subject>Género literario 1</dc:subject>
+    <dc:subject>Género literario 2</dc:subject>
+    <dc:subject>Género literario 3</dc:subject>
     <dc:description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut imperdiet nisi. Nam vitae porta enim, vel ornare nibh. Phasellus malesuada dui justo, a sodales purus porta in. In varius erat quis eros posuere mattis quis id mi. Aenean id velit metus. Nullam vitae sapien iaculis, vulputate nulla ut, euismod dolor. Nam massa ligula, porta in fringilla vitae, aliquam sit amet est. Ut mattis lorem gravida, aliquet dui et, fermentum sapien. Etiam bibendum vitae metus non interdum.</dc:description>
     <dc:contributor id="contrib1">Traductor</dc:contributor>
     <meta property="role" refines="#contrib1" scheme="marc:relators">trl</meta>
@@ -31,14 +35,14 @@
     <meta property="identifier-type" refines="#amazon-id" scheme="xsd:string">amazon</meta>
     <dc:identifier id="uri-id">urn:uri:http://grupotraductor.com/nombre-novela</dc:identifier>
     <meta property="identifier-type" refines="#uri-id" scheme="xsd:string">uri</meta>
-    <meta id="serie" property="belongs-to-collection">Nombre de la Novela [NL]</meta>
+    <meta id="serie" property="belongs-to-collection">Nombre de la novela en ingles [NL]</meta>
     <meta property="collection-type" refines="#serie">set</meta>
     <meta property="group-position" refines="#serie">1</meta>
-    <meta content="Nombre de la Novela [NL]" name="calibre:series"/>
+    <meta content="Nombre de la novela en ingles [NL]" name="calibre:series"/>
     <meta content="1" name="calibre:series_index"/>
     <meta content="9" name="calibre:rating"/>
-    <meta property="dcterms:modified">2021-11-20T12:19:02Z</meta>
-    <meta content="1.7.0" name="Sigil version"/>
+    <meta property="dcterms:modified">2022-02-12T20:40:35Z</meta>
+    <meta content="1.8.0" name="Sigil version"/>
     <meta name="cover" content="cover.jpg"/>
   </metadata>
   <manifest>
@@ -66,6 +70,7 @@
     <item id="x02.jpg" href="Images/02.jpg" media-type="image/jpeg"/>
     <item id="x03.jpg" href="Images/03.jpg" media-type="image/jpeg"/>
     <item id="Section0001.xhtml" href="Text/Section0001.xhtml" media-type="application/xhtml+xml"/>
+    <item id="Section0002.xhtml" href="Text/Section0002.xhtml" media-type="application/xhtml+xml"/>
   </manifest>
   <spine>
     <itemref idref="cubierta.xhtml" linear="yes"/>
@@ -76,6 +81,7 @@
     <itemref idref="prefacio.xhtml"/>
     <itemref idref="prologo.xhtml"/>
     <itemref idref="Section0001.xhtml"/>
+    <itemref idref="Section0002.xhtml"/>
     <itemref idref="epilogo.xhtml"/>
     <itemref idref="autor.xhtml"/>
     <itemref idref="traductor.xhtml"/>

@@ -652,10 +652,10 @@ svg {
   text-align: center;
 }
 /*Identacion: asangre y sinmargen*/
-.identar {
+.identar, .identar p {
   text-indent: 1.5em;
 }
-.noidentar {
+.noidentar, .noidentar p {
   text-indent: 0;
 }
 /*identa solo la primer linea*/
