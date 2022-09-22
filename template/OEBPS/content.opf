@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package version="3.0" unique-identifier="BookId" prefix="onix: http://www.editeur.org/ONIX/book/codelists/current.html#" xml:lang="es" xmlns="http://www.idpf.org/2007/opf">
-  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+    <dc:identifier id="BookId">urn:uuid:0</dc:identifier>
     <dc:language>es</dc:language>
-    <dc:title>Nombre de la novela en romanji - Volumen 01 [SIGLAS]</dc:title>
-    <dc:date>2021-01-01T00:00:00Z</dc:date>
+    <dc:title>Nombre de la novela en romanji - Volumen 01 [SIGLAS-GRUPO]</dc:title>
+    <dc:date>2010-10-31T00:00:00Z</dc:date>
     <dc:creator id="creator01">Autor Apellido</dc:creator>
     <meta property="role" refines="#creator01" scheme="marc:relators">aut</meta>
     <meta property="alternate-script" refines="#creator01" xml:lang="ja">アネコ ユサギ</meta>
@@ -26,7 +27,6 @@
     <dc:contributor id="contrib3">ZeePubs</dc:contributor>
     <meta property="role" refines="#contrib3" scheme="marc:relators">dst</meta>
     <dc:publisher>Grupo Traductor</dc:publisher>
-    <dc:identifier id="BookId">urn:uuid:cb73990a-de75-4fe8-b57b-589db016d5fe</dc:identifier>
     <dc:identifier id="isbn13">urn:isbn:000-00-0000-000-0</dc:identifier>
     <meta property="identifier-type" refines="#isbn13" scheme="onix:codelist5">15</meta>
     <dc:identifier id="isbn10">urn:isbn:00-0000-000-0</dc:identifier>
@@ -41,8 +41,8 @@
     <meta content="Nombre de la novela en ingles [NL]" name="calibre:series"/>
     <meta content="1" name="calibre:series_index"/>
     <meta content="9" name="calibre:rating"/>
-    <meta property="dcterms:modified">2022-03-20T17:34:10Z</meta>
-    <meta content="1.8.0" name="Sigil version"/>
+    <meta property="dcterms:modified">2022-09-22T19:05:58Z</meta>
+    <meta content="1.9.20" name="Sigil version"/>
     <meta name="cover" content="cover.jpg"/>
   </metadata>
   <manifest>
@@ -73,13 +73,16 @@
     <item id="Section0002.xhtml" href="Text/Section0002.xhtml" media-type="application/xhtml+xml"/>
     <item id="sinopsis.xhtml" href="Text/sinopsis.xhtml" media-type="application/xhtml+xml"/>
     <item id="perfil.xhtml" href="Text/perfil.xhtml" media-type="application/xhtml+xml"/>
+    <item id="logos.xhtml" href="Text/logos.xhtml" media-type="application/xhtml+xml"/>
+    <item id="zeepubs.png" href="Images/zeepubs.png" media-type="image/png"/>
   </manifest>
   <spine>
     <itemref idref="cubierta.xhtml" linear="yes"/>
+    <itemref idref="sinopsis.xhtml"/>
     <itemref idref="resumen.xhtml"/>
     <itemref idref="perfil.xhtml"/>
-    <itemref idref="sinopsis.xhtml"/>
     <itemref idref="titulo.xhtml"/>
+    <itemref idref="logos.xhtml"/>
     <itemref idref="contenido.xhtml"/>
     <itemref idref="epigrafe.xhtml"/>
     <itemref idref="prefacio.xhtml"/>
