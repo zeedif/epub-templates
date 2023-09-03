@@ -660,7 +660,7 @@ blockquote.aviso p {
 .noidentar, .noidentar p {
   text-indent: 0;
 }
-/*identa solo la primer linea*/
+/*sangría francesa, no identa la primer linea, útil para bibliografías*/
 .idt-ln {
   text-indent: -1.5em;
   margin-left: 1.5em; /*Se reajustará con la configuración del usuario del tamaño de fuente*/
