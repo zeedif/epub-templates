@@ -1,0 +1,49 @@
+name: Publicar EPUB
+
+on:
+  push:
+    tags: ['v*']
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Etiqueta a publicar (por ejemplo v1.13.5)
+        required: true
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    env:
+      TAG: ${{ inputs.tag || github.ref_name }}
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      # La rama principal trae el CHANGELOG; la plantilla sale de la etiqueta.
+      - uses: actions/checkout@v4
+        with:
+          ref: master
+          fetch-depth: 0
+
+      # Solo el contenido de template/, con mimetype primero y sin comprimir.
+      - name: Empaquetar
+        run: |
+          mkdir -p /tmp/version
+          git archive "$TAG" template | tar -x -C /tmp/version
+          cd /tmp/version/template
+          zip -X0q "$GITHUB_WORKSPACE/zeepubs-base-${TAG}.epub" mimetype
+          zip -X9rqD "$GITHUB_WORKSPACE/zeepubs-base-${TAG}.epub" META-INF OEBPS
+
+      - name: Notas del CHANGELOG
+        run: |
+          awk -v v="${TAG#v}" '
+            index($0, "## [" v "]") == 1 { on = 1; next }
+            on && /^(## |\[)/ { exit }
+            on { print }
+          ' CHANGELOG.md > notas.md
+
+      - name: Publicar
+        run: |
+          pre=""; case "$TAG" in *-*) pre="--prerelease" ;; esac
+          gh release create "$TAG" "zeepubs-base-${TAG}.epub" \
+            --title "ZeePubs Base ${TAG}" --notes-file notas.md --verify-tag $pre

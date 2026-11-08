@@ -1,18 +1,29 @@
 # Plantillas de ePubs
 
-Este repositorio contiene algunos templates para la creación de ePubs.
+Base EPUB 3 que usamos en ZeePubs para maquetar novelas ligeras con Sigil entre
+2021 y 2023. Hoy las plantillas se generan con ZeeTools (EPUB 3.4); esta base se
+conserva como referencia y para mantener los EPUB que se hicieron con ella.
 
-## Estructura de Carpetas
+## Estructura
 
-- `template/`: Carpeta que contiene los archivos necesarios para el template utilizado por los miembros de ZeePubs.
+- [`template/`](template): archivos de la base (`mimetype`, `META-INF/` y `OEBPS/`).
+  - [`style.css`](template/OEBPS/Styles/style.css)
+- [`CHANGELOG.md`](CHANGELOG.md): qué cambió en cada versión y cuándo.
 
-## Uso
+## Descargar
 
-Puedes descargar este repositorio para utilizar los templates de EPUBs en tus proyectos. Simplemente asegúrate de modificar los archivos según tus necesidades específicas.
+Al etiquetar una versión se publica su EPUB en
+[Releases](https://github.com/zeedif/epub-templates/releases). El EPUB solo lleva
+el contenido de `template/`.
 
-## Contribuciones
+## Vista previa de Markdown
 
-Las contribuciones son bienvenidas. Si deseas mejorar el template o agregar nuevas características, por favor abre un *issue* para discutir tus ideas o envía un *pull request* con tus cambios propuestos.
+La hoja de estilos se publica en GitHub Pages, así que sirve como estilo de la
+vista previa de Markdown en VS Code:
+
+```json
+"markdown.styles": ["https://zeedif.github.io/epub-templates/template/OEBPS/Styles/style.css"]
+```
 
 ## Licencia
 
